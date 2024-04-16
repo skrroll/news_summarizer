@@ -48,6 +48,7 @@ def main():
     msg['From'] = sender_email
     msg['To'] = receiver_email
     
+    print("Sending email to " + receiver_email)
     server = smtplib.SMTP_SSL('smtp.googlemail.com', 465)
     server.login(sender_email, sender_password)
     server.sendmail(sender_email, receiver_email, msg.as_string())
