@@ -1,0 +1,6 @@
+services:
+  summarizer:
+    container_name: news_summarizer
+    image: news_summarizer:latest
+    env_file:
+      - .env
