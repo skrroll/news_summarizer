@@ -50,7 +50,7 @@ def main():
     
     server = smtplib.SMTP_SSL('smtp.googlemail.com', 465)
     server.login(sender_email, sender_password)
-    server.sendmail(sender_email, sender_email, msg.as_string())
+    server.sendmail(sender_email, receiver_email, msg.as_string())
     server.quit()
         
 main()
